@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="248595983.jpeg">
+  <title>Grid System</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    .layout-container {
+      display: grid;
+      grid-template-columns: 200px 1fr;  
+      grid-template-rows: auto 200px auto; 
+      grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .header {
+      grid-area: header;
+      background: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background: #ccc;
+      padding: 15px;
+    }
+    .sidebar ul{
+      display : flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sidebar a{
+      color: #020202;
+    }
+    .main {
+      grid-area: main;
+      background: #fff;
+      padding: 15px;
+    }
+    .main p{
+      font-size: 20px;
+      color: #020202;
+    }
+    .footer {
+      grid-area: footer;
+      background: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+       gap: 10px;                            
+    }
+    .gallery-item {
+      position: relative; 
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .caption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Grid System</h1>
+  <div class="layout-container">
+    <div class="header">Header</div>
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">Flex-version</a></li>
+        <li><a href="assik2_3.html">Portfolio</a></li>
+      </ul>
+    </div>
+    <div class="main"><p>Hello! I'm a Computer Science student passionate about backend development, machine learning, and clean web engineering.</p></div>
+    <div class="footer">Footer</div>
+  </div>
+
+  <h1>Image Gallery</h1>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="images.jpeg" alt="Pic 1">
+      <div class="caption">LINKEDIN</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images.png" alt="Pic 2">
+      <div class="caption">LEETCODE</div>
+    </div>
+    <div class="gallery-item">
+      <img src="imagesss.png" alt="Pic 3">
+      <div class="caption">HUGGINGFACE</div>
+    </div>
+    <div class="gallery-item">
+      <img src="hello1.jpeg" alt="Pic 4">
+      <div class="caption">MONKEYTYPE</div>
+    </div>
+    <div class="gallery-item">
+      <img src="hello2.jpeg" alt="Pic 5">
+      <div class="caption">CODEFORCES</div>
+    </div>
+    <div class="gallery-item">
+      <img src="1images.png" alt="Pic 6">
+      <div class="caption">KAGGLE</div>
+    </div>
+    <div class="gallery-item">
+      <img src="github.png" alt="Pic 7">
+      <div class="caption">GITHUB</div>
+    </div>
+    <div class="gallery-item">
+      <img src="CHATGPT.png" alt="Pic 2">
+      <div class="caption">CHATGPT</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Без имени.png" alt="Pic 3">
+      <div class="caption">CLAUDE</div>
+    </div>
+    </div>
+</body>

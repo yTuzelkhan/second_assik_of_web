@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="248595983.jpeg">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #ffffff;
+            padding: 16px 32px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .layout-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 32px;
+            max-width: 1000px;
+            width: 100%;
+            margin: 32px auto;
+            padding: 0px 16px;
+            flex:1
+        }
+
+        .projects-section h2 {
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 16px;
+        }
+
+        .card-btn {
+            align-self: flex-start;
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 6px 13px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .card-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .sidebar-widget {
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            padding: 16px;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .sidebar-widget p {
+            font-size: 14px;
+            color: #555555;
+        }
+
+        .skills-list {
+            padding-left: 20px;
+            font-size: 14px;
+            color: #555555;
+        }
+
+        .skills-list li {
+            margin-bottom: 4px;
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            background-color: #333;
+            color: #bdc3c7;
+            padding: 16px;
+            margin-top: 32px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">MyPortfolio</div>
+        <div class="nav-links">
+            <a href="index.html">FLEX-VERSION</a>
+            <a href="assik2_2.html">GRID-VERSION</a>
+        </div>
+    </div>
+
+    <div class="layout-container">
+        
+        <div class="projects-section" id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="card-content">
+                        <div class="card-title">Drone Detection System</div>
+                        <div class="card-description">A computer vision application using YOLOv8 to detect and track real-time drone aerial activity.</div>
+                    </div>
+                    <a href="https://huggingface.co/Tuzelkhan/drone-yolov8" class="card-btn">View Code</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-content">
+                        <div class="card-title">Schedule Assistant Bot</div>
+                        <div class="card-description">An automated Telegram bot built with Python and LLM integrations to manage daily academic timetables.</div>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1FSVjp1Mb5ikPOLP_CMdd9kbvb58zpX4a/view?usp=sharing" class="card-btn">View Code</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-content">
+                        <div class="card-title">Data Analytics Dashboard</div>
+                        <div class="card-description">Interactive dashboard implementing PCA, t-SNE, and clustering algorithms using PyTorch and Scikit-Learn.</div>
+                    </div>
+                    <a href="https://colab.research.google.com/drive/1C26sD-137kVRl_iA3xD4XOvmTdVmlUA8?usp=sharing" class="card-btn">View Code</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-content">
+                        <div class="card-title">Personal Web App</div>
+                        <div class="card-description">A responsive portfolio website layout designed using CSS Flexbox and CSS Grid best practices.</div>
+                    </div>
+                    <a href="#" class="card-btn">View Code</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sidebar" id="about">
+            <div class="sidebar-widget">
+                <h3>About Me</h3>
+                <p>Hello! I'm a Computer Science student passionate about backend development, machine learning, and clean web engineering.</p>
+            </div>
+            
+            <div class="sidebar-widget" id="skills">
+                <h3>Skills</h3>
+                <ul class="skills-list">
+                    <li>Python & PyTorch</li>
+                    <li>C# & .NET</li>
+                    <li>HTML5 & CSS Grid/Flexbox</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Yermek Tuzelkhan IT-2513</p>
+    </div>
+
+</body>
+</html>
